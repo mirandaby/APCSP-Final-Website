@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+.tablink, html {
+
+  height: 100%;
+  margin: 0;
+  font-family: monospace;
+}
+
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 8px;
+  font-size: 15px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: gray;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: black;
+  display: none;
+  padding: 25px 20px;
+  height: 100%;
+  align-content: center;
+}
+.spacing{
+  padding-right: 750px;
+  padding-left: 750px;
+  padding-top: 100px;
+  padding-bottom: 100px
+}
+.img {
+  border-radius:  50%;
+}
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0%;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  height: 115%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.bg-image {
+  /* The image used */
+  background-image: url("file:///Users/Asha/Desktop/Screen%20Shot%202022-05-24%20at%205.28.14%20PM.png");
+background-repeat: no-repeat;
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+
+  /* Full height */
+  height: 200%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-size: 100%, cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+
+#Home {background-color: white;}
+#Projects {background-color: white;}
+#AboutMe {background-color: white;}
+#Contacts {background-color: white;}
+#Robotics {background-color: white;}
+
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'lightskyblue')"id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Projects', this, 'lightskyblue')" >Projects</button>
+<button class="tablink" onclick="openPage('Robotics', this, 'lightskyblue')">Robotics</button>
+<button class="tablink" onclick="openPage('AboutMe', this, 'lightskyblue')">About Me</button>
+<button class="tablink" onclick="openPage('Contacts', this, 'lightskyblue')">Contacts</button>
+
+
+
+
+<div id="Home" class="tabcontent">
+
+<img src="file:///Users/Asha/Desktop/Screen%20Shot%202022-05-24%20at%205.28.14%20PM.png" width = "1875px" height = "1000">
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h1>Home Page</h1>
+  <p>Hi, Welcome! This is the homepage. On this your website you will learn more about me and also projects I have done.</p>
+</div>
+</div>
+
+
+
+<div id="AboutMe" class="tabcontent">
+    <div class = "spacing">
+      <h3>About Me</h3>
+      <img class = "img" src = "file:///Users/Asha/Desktop/Screen%20Shot%202022-05-18%20at%209.41.27%20PM.png" alt="Picture of Me" width="375" height="475">
+     
+            <h4>
+            Hi my name is Asha Byers. I was born in China and now
+            I am living in Piedmont California. I am 16 years old and attend school at Piedmont High. During my freetime I play tennis or go to robotics. I also like hanging out with my friends during my freetime.
+            </h4>
+
+       </div>
+</div>
+
+<div id="Robotics" class="tabcontent">
+
+<div class="container">
+  <img src="file:///Users/Asha/Desktop/Screen%20Shot%202022-05-24%20at%205.06.52%20PM.png" alt="Picture" class="image">
+  <div class="overlay">
+    <div class="text"><img src = "2DC8F348-D5F4-4972-96A1-C4FD04CE43FB_1_105_c.jpeg" >Robotics<br>This page is about robotics which I do a ton of outside of school. The Piedmont Highlanders team is part of FRC which is a huge organization that promotes Stem. It is a huge organization that has a bunch of international teams where we all come together to compete. Through the process of buildling a robot we learn how to desighn mechanisms and also code depending what subteam we join. The two main ones are software and mechanical but there are also other jobs you can do when you are on the team. </div>
+  </div>
+</div>
+
+</div>
+
+<div id="Projects" class="tabcontent">
+  <br>
+    <br>
+     <br>
+  <h2>Projects</h2>
+  <br>
+  <p>...</p> 
+</div>
+
+
+<div id="Contacts" class="tabcontent">
+  <br>
+    <br>
+     <br>
+  <h2>Projects</h2>
+  <br>
+  <p>...</p> 
+</div>
+
+
+<script>
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html>
